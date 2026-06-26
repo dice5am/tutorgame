@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet Pop & Learn! - Educational Kids Game</title>
+  <meta name="description" content="A fun, interactive, and colorful alphabet learning and bubble pop game for kids and toddlers. Learn letters A-Z with audio and cute animations.">
+  <!-- Google Fonts: Fredoka (Rounded, playful typeface) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+  <!-- Game Container -->
+  <div id="app-container">
+    
+    <!-- Screen 1: Home / Main Menu -->
+    <section id="home-screen" class="screen active">
+      <header class="app-header">
+        <div class="mascot-container-header">
+          <!-- Inline SVG for Bippy the Bubble Mascot -->
+          <svg class="bippy-mascot floating" viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg" aria-label="Bippy the Bubble Mascot">
+            <defs>
+              <radialGradient id="bippy-grad-header" cx="30%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#a0e2ff" />
+                <stop offset="70%" stop-color="#0984e3" />
+                <stop offset="100%" stop-color="#00cec9" />
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="40" fill="url(#bippy-grad-header)" stroke="#0984e3" stroke-width="3" />
+            <!-- Shine -->
+            <path d="M 25 25 Q 35 15 50 20 Q 40 30 25 25" fill="rgba(255, 255, 255, 0.6)" />
+            <!-- Rosy cheeks -->
+            <ellipse cx="25" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+            <ellipse cx="75" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+            <!-- Eyes -->
+            <g class="bippy-eyes">
+              <ellipse class="bippy-eye eye-left" cx="38" cy="45" rx="6" ry="8" fill="#2d3436" />
+              <circle class="bippy-eye-shine eye-left-shine-1" cx="36" cy="42" r="2" fill="#fff" />
+              <circle class="bippy-eye-shine eye-left-shine-2" cx="40" cy="47" r="0.8" fill="#fff" />
+              
+              <ellipse class="bippy-eye eye-right" cx="62" cy="45" rx="6" ry="8" fill="#2d3436" />
+              <circle class="bippy-eye-shine eye-right-shine-1" cx="60" cy="42" r="2" fill="#fff" />
+              <circle class="bippy-eye-shine eye-right-shine-2" cx="64" cy="47" r="0.8" fill="#fff" />
+            </g>
+            <!-- Mouth -->
+            <path class="bippy-mouth" d="M 44 54 Q 50 60 56 54" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <!-- Speech Bubble -->
+          <div class="bippy-speech-bubble" id="bippy-home-speech">
+            Hi! I'm Bippy! Let's learn letters together! 🌟
+          </div>
+        </div>
+        
+        <h1 class="bouncing-title" id="main-title">
+          <span>A</span><span>l</span><span>p</span><span>h</span><span>a</span><span>b</span><span>e</span><span>t</span>
+          <span>P</span><span>o</span><span>p</span>
+          <span>&</span>
+          <span>L</span><span>e</span><span>a</span><span>r</span><span>n</span><span>!</span>
+        </h1>
+        <p class="subtitle">Tap a letter to start your adventure! 🌟</p>
+        <button class="btn btn-control" id="reset-progress-btn">🗑️ Reset Progress</button>
+      </header>
+      
+      <div class="letters-grid" id="letters-grid">
+        <!-- Generated dynamically in app.js -->
+      </div>
+    </section>
+
+    <!-- Screen 2: Dashboard Screen [NEW] -->
+    <section id="dashboard-screen" class="screen">
+      <div class="dashboard-container">
+        <button class="btn btn-back" id="dashboard-back-btn" aria-label="Go back to main menu">🏠 Menu</button>
+        
+        <div class="dashboard-header">
+          <div class="active-letter-card">
+            <h2 id="dashboard-letter-display">A</h2>
+            <p id="dashboard-word-display">Apple</p>
+            <div class="dashboard-letter-image-container">
+              <img src="" id="dashboard-letter-image" alt="" class="dashboard-letter-image">
+            </div>
+            <button class="btn-voice" id="dashboard-voice-btn" aria-label="Listen to pronunciation">🔊</button>
+          </div>
+          
+          <div class="mascot-host-container">
+            <svg class="bippy-mascot floating" id="bippy-dashboard" viewBox="0 0 100 100" width="120" height="120" xmlns="http://www.w3.org/2000/svg" aria-label="Bippy the Bubble Mascot">
+              <defs>
+                <radialGradient id="bippy-grad-dashboard" cx="30%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#a0e2ff" />
+                  <stop offset="70%" stop-color="#0984e3" />
+                  <stop offset="100%" stop-color="#00cec9" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="40" fill="url(#bippy-grad-dashboard)" stroke="#0984e3" stroke-width="3" />
+              <path d="M 25 25 Q 35 15 50 20 Q 40 30 25 25" fill="rgba(255, 255, 255, 0.6)" />
+              <ellipse cx="25" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+              <ellipse cx="75" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+              <g class="bippy-eyes">
+                <ellipse class="bippy-eye eye-left" cx="38" cy="45" rx="6" ry="8" fill="#2d3436" />
+                <circle class="bippy-eye-shine eye-left-shine-1" cx="36" cy="42" r="2" fill="#fff" />
+                <circle class="bippy-eye-shine eye-left-shine-2" cx="40" cy="47" r="0.8" fill="#fff" />
+                
+                <ellipse class="bippy-eye eye-right" cx="62" cy="45" rx="6" ry="8" fill="#2d3436" />
+                <circle class="bippy-eye-shine eye-right-shine-1" cx="60" cy="42" r="2" fill="#fff" />
+                <circle class="bippy-eye-shine eye-right-shine-2" cx="64" cy="47" r="0.8" fill="#fff" />
+              </g>
+              <path class="bippy-mouth" d="M 44 54 Q 50 60 56 54" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            <div class="bippy-speech-bubble" id="bippy-dashboard-speech">
+              Welcome to the Letter A Dashboard! Choose a game!
+            </div>
+            <button class="btn-voice-help" id="dashboard-help-btn" aria-label="Replay intro sound">🔊 Help</button>
+          </div>
+        </div>
+        
+        <div class="games-grid">
+          <!-- Game 1: Trace & Draw -->
+          <div class="game-card" id="card-trace" role="button" tabindex="0">
+            <div class="game-card-icon">✍️</div>
+            <h3>Trace & Draw</h3>
+            <p>Learn to write the letter!</p>
+            <div class="star-badge" id="star-trace">⭐</div>
+          </div>
+          <!-- Game 2: Sound Detective -->
+          <div class="game-card" id="card-match" role="button" tabindex="0">
+            <div class="game-card-icon">🔍</div>
+            <h3>Sound Detective</h3>
+            <p>Find the starting sound!</p>
+            <div class="star-badge" id="star-match">⭐</div>
+          </div>
+          <!-- Game 3: Bubble Pop -->
+          <div class="game-card" id="card-pop" role="button" tabindex="0">
+            <div class="game-card-icon">🎈</div>
+            <h3>Bubble Pop</h3>
+            <p>Pop target bubbles!</p>
+            <div class="star-badge" id="star-pop">⭐</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: Tracing Screen [NEW] -->
+    <section id="trace-screen" class="screen">
+      <div class="trace-container">
+        <header class="game-hud">
+          <button class="btn btn-hud-back" id="trace-back-btn" aria-label="Exit trace and return to letter dashboard">🏠 Exit</button>
+          <div class="game-target">
+            Trace: <span id="trace-target-letter" class="target-badge">A</span>
+          </div>
+          <div class="trace-controls">
+            <button class="btn btn-control" id="trace-clear-btn">🧹 Clear</button>
+            <button class="btn btn-control" id="trace-guide-btn">💡 Dots: On</button>
+          </div>
+        </header>
+        
+        <div class="trace-canvas-wrapper">
+          <canvas id="trace-canvas"></canvas>
+        </div>
+        
+        <!-- Speech Bubble from Bippy -->
+        <div class="mascot-trace-container">
+          <svg class="bippy-mascot floating" id="bippy-trace" viewBox="0 0 100 100" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bippy-grad-trace" cx="30%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#a0e2ff" />
+                <stop offset="70%" stop-color="#0984e3" />
+                <stop offset="100%" stop-color="#00cec9" />
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="40" fill="url(#bippy-grad-trace)" stroke="#0984e3" stroke-width="3" />
+            <path d="M 25 25 Q 35 15 50 20 Q 40 30 25 25" fill="rgba(255, 255, 255, 0.6)" />
+            <ellipse cx="25" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+            <ellipse cx="75" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+            <g class="bippy-eyes">
+              <ellipse class="bippy-eye eye-left" cx="38" cy="45" rx="6" ry="8" fill="#2d3436" />
+              <circle class="bippy-eye-shine eye-left-shine-1" cx="36" cy="42" r="2" fill="#fff" />
+              <circle class="bippy-eye-shine eye-left-shine-2" cx="40" cy="47" r="0.8" fill="#fff" />
+              
+              <ellipse class="bippy-eye eye-right" cx="62" cy="45" rx="6" ry="8" fill="#2d3436" />
+              <circle class="bippy-eye-shine eye-right-shine-1" cx="60" cy="42" r="2" fill="#fff" />
+              <circle class="bippy-eye-shine eye-right-shine-2" cx="64" cy="47" r="0.8" fill="#fff" />
+            </g>
+            <path class="bippy-mouth" d="M 44 54 Q 50 60 56 54" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <div class="bippy-speech-bubble" id="bippy-trace-speech">
+            Trace the letter with your finger or mouse! Follow the dots!
+          </div>
+          <button class="btn-voice-help" id="trace-help-btn" aria-label="Replay tracing rules">🔊 Help</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 4: Matching Screen / Sound Detective [NEW] -->
+    <section id="match-screen" class="screen">
+      <div class="match-container">
+        <header class="game-hud">
+          <button class="btn btn-hud-back" id="match-back-btn" aria-label="Exit matching game and return to letter dashboard">🏠 Exit</button>
+          <div class="game-target">
+            Listen: <span id="match-target-sound" class="target-badge">/a/</span>
+          </div>
+        </header>
+        
+        <div class="match-banner">
+          <div class="mascot-match-container">
+            <svg class="bippy-mascot floating" id="bippy-match" viewBox="0 0 100 100" width="90" height="90" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="bippy-grad-match" cx="30%" cy="30%" r="70%">
+                  <stop offset="0%" stop-color="#a0e2ff" />
+                  <stop offset="70%" stop-color="#0984e3" />
+                  <stop offset="100%" stop-color="#00cec9" />
+                </radialGradient>
+              </defs>
+              <circle cx="50" cy="50" r="40" fill="url(#bippy-grad-match)" stroke="#0984e3" stroke-width="3" />
+              <path d="M 25 25 Q 35 15 50 20 Q 40 30 25 25" fill="rgba(255, 255, 255, 0.6)" />
+              <ellipse cx="25" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+              <ellipse cx="75" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+              <g class="bippy-eyes">
+                <ellipse class="bippy-eye eye-left" cx="38" cy="45" rx="6" ry="8" fill="#2d3436" />
+                <circle class="bippy-eye-shine eye-left-shine-1" cx="36" cy="42" r="2" fill="#fff" />
+                <circle class="bippy-eye-shine eye-left-shine-2" cx="40" cy="47" r="0.8" fill="#fff" />
+                
+                <ellipse class="bippy-eye eye-right" cx="62" cy="45" rx="6" ry="8" fill="#2d3436" />
+                <circle class="bippy-eye-shine eye-right-shine-1" cx="60" cy="42" r="2" fill="#fff" />
+                <circle class="bippy-eye-shine eye-right-shine-2" cx="64" cy="47" r="0.8" fill="#fff" />
+              </g>
+              <path class="bippy-mouth" d="M 44 54 Q 50 60 56 54" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            <div class="bippy-speech-bubble" id="bippy-match-speech">
+              Find the picture that starts with the sound!
+            </div>
+            <button class="btn-voice-help" id="match-help-btn" aria-label="Replay phonics prompt">🔊 Help</button>
+          </div>
+        </div>
+        
+        <div class="match-cards-container" id="match-cards-container">
+          <!-- Generates 3 horizontal 3D cards dynamically in app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 5: Bubble Pop Game Screen -->
+    <section id="game-screen" class="screen">
+      <div class="game-hud">
+        <button class="btn btn-hud-back" id="game-back-btn" aria-label="Exit game and return to letter dashboard">🏠 Exit</button>
+        <div class="game-target">
+          Find: <span id="game-target-letter" class="target-badge">A</span>
+        </div>
+        
+        <!-- Progress Bar -->
+        <div class="game-progress-container">
+          <div class="game-progress-bar" id="game-progress-bar" style="width: 0%;"></div>
+        </div>
+        
+        <div class="score-board">
+          Score: <span id="game-score">0</span>/10
+        </div>
+      </div>
+      
+      <!-- Instructions Banner with Bippy! -->
+      <div class="game-banner" id="game-banner">
+        <div class="mascot-banner-inline">
+          <svg class="bippy-mascot floating" id="bippy-banner" viewBox="0 0 100 100" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bippy-grad-banner" cx="30%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#a0e2ff" />
+                <stop offset="70%" stop-color="#0984e3" />
+                <stop offset="100%" stop-color="#00cec9" />
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="40" fill="url(#bippy-grad-banner)" stroke="#0984e3" stroke-width="3" />
+            <path d="M 25 25 Q 35 15 50 20 Q 40 30 25 25" fill="rgba(255, 255, 255, 0.6)" />
+            <ellipse cx="25" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+            <ellipse cx="75" cy="55" rx="6" ry="4" fill="#ff7675" opacity="0.6" />
+            <g class="bippy-eyes">
+              <ellipse class="bippy-eye eye-left" cx="38" cy="45" rx="6" ry="8" fill="#2d3436" />
+              <circle class="bippy-eye-shine eye-left-shine-1" cx="36" cy="42" r="2" fill="#fff" />
+              <circle class="bippy-eye-shine eye-left-shine-2" cx="40" cy="47" r="0.8" fill="#fff" />
+              
+              <ellipse class="bippy-eye eye-right" cx="62" cy="45" rx="6" ry="8" fill="#2d3436" />
+              <circle class="bippy-eye-shine eye-right-shine-1" cx="60" cy="42" r="2" fill="#fff" />
+              <circle class="bippy-eye-shine eye-right-shine-2" cx="64" cy="47" r="0.8" fill="#fff" />
+            </g>
+            <path class="bippy-mouth" d="M 44 54 Q 50 60 56 54" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round" />
+          </svg>
+          <span>Pop the <span id="banner-target">A</span> bubbles! 🎈</span>
+        </div>
+      </div>
+
+      <!-- Bubble Spawning Area -->
+      <div class="bubble-stage" id="bubble-stage">
+        <!-- Bubbles float up from here -->
+      </div>
+
+      <!-- Audio toggle inside HUD -->
+      <button class="btn-audio-mute" id="audio-toggle" aria-label="Mute sound" aria-pressed="false">🔊</button>
+    </section>
+
+    <!-- Screen 6: Reward Screen -->
+    <section id="reward-screen" class="screen">
+      <div class="reward-content">
+        <!-- Certificate of Mastery -->
+        <div class="certificate-container" id="certificate-container">
+          <div class="certificate-border">
+            <div class="certificate-badge">🎓</div>
+            <h2 class="certificate-title">Mastery Certificate</h2>
+            <p class="certificate-text">This certifies that you have mastered the letter</p>
+            <input type="text" id="certificate-name-input" placeholder="Type your name! ✏️" aria-label="Enter name for certificate" />
+            <div class="certificate-letter" id="certificate-letter">Aa</div>
+            <p class="certificate-footer">You are a superstar! 🌟</p>
+          </div>
+        </div>
+
+        <div class="stars-container">
+          <span class="star-reward bounce-delay-1" id="reward-star-1">☆</span>
+          <span class="star-reward main-star" id="reward-star-2">☆</span>
+          <span class="star-reward bounce-delay-2" id="reward-star-3">☆</span>
+        </div>
+        
+        <h2 class="reward-title">Well Done! 🥳</h2>
+        <p class="reward-message" id="reward-message">You popped all the A bubbles!</p>
+        
+        <div class="reward-buttons">
+          <button class="btn btn-replay" id="replay-btn">🎈 Play Again</button>
+          <button class="btn btn-next" id="next-letter-btn">Next Letter ➡️</button>
+          <button class="btn btn-home" id="reward-home-btn">🏠 Main Menu</button>
+        </div>
+      </div>
+      <!-- Confetti Canvas -->
+      <canvas id="confetti-canvas"></canvas>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
