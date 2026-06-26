@@ -1,0 +1,12 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Eggs -->
+  <ellipse cx="38" cy="44" rx="10" ry="14" fill="#a29bfe" stroke="#2d3436" stroke-width="2" transform="rotate(-15 38 44)"/>
+  <ellipse cx="62" cy="44" rx="10" ry="14" fill="#74b9ff" stroke="#2d3436" stroke-width="2" transform="rotate(15 62 44)"/>
+  <ellipse cx="50" cy="38" rx="10" ry="14" fill="#81ecec" stroke="#2d3436" stroke-width="2"/>
+  <!-- Nest Body -->
+  <path d="M 12 48 C 12 76, 88 76, 88 48 C 82 56, 18 56, 12 48 Z" fill="#d35400" stroke="#2d3436" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Twig Details (Cross hatching) -->
+  <path d="M 18 53 L 82 53 M 24 60 L 76 60 M 32 66 L 68 66" stroke="#a04000" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <path d="M 85 45 Q 94 40, 96 32 Q 88 34, 85 45" fill="#2ecc71" stroke="#2d3436" stroke-width="1.5"/>
+</svg>

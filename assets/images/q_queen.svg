@@ -1,0 +1,22 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hair (Simple cloud shape) -->
+  <path d="M 20 54 Q 10 40, 24 32 Q 50 18, 76 32 Q 90 40, 80 54 Z" fill="#e67e22" stroke="#2d3436" stroke-width="3"/>
+  <!-- Face -->
+  <circle cx="50" cy="52" r="26" fill="#ffe0bd" stroke="#2d3436" stroke-width="3"/>
+  <!-- Crown -->
+  <polygon points="32,32 38,12 50,22 62,12 68,32" fill="#f1c40f" stroke="#2d3436" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Crown Jewels -->
+  <circle cx="38" cy="12" r="3" fill="#e74c3c"/>
+  <circle cx="50" cy="22" r="3" fill="#3498db"/>
+  <circle cx="62" cy="12" r="3" fill="#e74c3c"/>
+  <circle cx="50" cy="30" r="2.5" fill="#2ecc71"/>
+  <!-- Face Details -->
+  <circle cx="42" cy="48" r="3.5" fill="#2d3436"/>
+  <circle cx="58" cy="48" r="3.5" fill="#2d3436"/>
+  <circle cx="43.5" cy="46.5" r="1" fill="#ffffff"/>
+  <circle cx="59.5" cy="46.5" r="1" fill="#ffffff"/>
+  <path d="M 46 56 Q 50 60, 54 56" stroke="#2d3436" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Blush -->
+  <circle cx="34" cy="52" r="3.5" fill="#ff7675" opacity="0.6"/>
+  <circle cx="66" cy="52" r="3.5" fill="#ff7675" opacity="0.6"/>
+</svg>

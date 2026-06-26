@@ -1,0 +1,14 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Handle/Stick -->
+  <path d="M 50 48 L 50 82 A 6 6 0 0 0 62 82" fill="none" stroke="#7f8c8d" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Canopy (Semi-circle) -->
+  <path d="M 12 48 C 12 20, 88 20, 88 48 C 76 43, 64 43, 50 48 C 36 43, 24 43, 12 48 Z" fill="#a29bfe" stroke="#2d3436" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Stripes -->
+  <path d="M 31 22 Q 38 35, 38 46" fill="none" stroke="#d63031" stroke-width="3.5" opacity="0.3"/>
+  <path d="M 69 22 Q 62 35, 62 46" fill="none" stroke="#d63031" stroke-width="3.5" opacity="0.3"/>
+  <!-- Tip -->
+  <polygon points="48,16 52,16 50,8" fill="#7f8c8d" stroke="#2d3436" stroke-width="2"/>
+  <!-- Raindrops -->
+  <path d="M 20 82 Q 18 86, 20 88 A 2 2 0 0 0 24 88 Q 22 86, 20 82" fill="#74b9ff"/>
+  <path d="M 78 82 Q 76 86, 78 88 A 2 2 0 0 0 82 88 Q 80 86, 78 82" fill="#74b9ff"/>
+</svg>

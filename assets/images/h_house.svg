@@ -1,0 +1,21 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chimney -->
+  <rect x="68" y="20" width="10" height="20" fill="#e74c3c" stroke="#2d3436" stroke-width="3"/>
+  <!-- Smoke -->
+  <path d="M 73 14 Q 70 8, 75 4" stroke="#dfe6e9" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.8"/>
+  <!-- Roof -->
+  <polygon points="12,42 50,12 88,42" fill="#e74c3c" stroke="#2d3436" stroke-width="3" stroke-linejoin="round"/>
+  <!-- Body -->
+  <rect x="20" y="42" width="60" height="42" fill="#ffeaa7" stroke="#2d3436" stroke-width="3"/>
+  <!-- Door -->
+  <rect x="42" y="58" width="16" height="26" fill="#d35400" stroke="#2d3436" stroke-width="2.5"/>
+  <circle cx="46" cy="71" r="2" fill="#f1c40f"/>
+  <!-- Windows -->
+  <rect x="28" y="48" width="12" height="12" fill="#74b9ff" stroke="#2d3436" stroke-width="2"/>
+  <line x1="34" y1="48" x2="34" y2="60" stroke="#2d3436" stroke-width="1.5"/>
+  <line x1="28" y1="54" x2="40" y2="54" stroke="#2d3436" stroke-width="1.5"/>
+  
+  <rect x="60" y="48" width="12" height="12" fill="#74b9ff" stroke="#2d3436" stroke-width="2"/>
+  <line x1="66" y1="48" x2="66" y2="60" stroke="#2d3436" stroke-width="1.5"/>
+  <line x1="60" y1="54" x2="72" y2="54" stroke="#2d3436" stroke-width="1.5"/>
+</svg>

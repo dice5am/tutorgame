@@ -1,0 +1,19 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cone -->
+  <polygon points="32,54 50,92 68,54" fill="#e28743" stroke="#2d3436" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="38" y1="62" x2="63" y2="62" stroke="#c46d29" stroke-width="2"/>
+  <line x1="43" y1="74" x2="57" y2="74" stroke="#c46d29" stroke-width="2"/>
+  <!-- Scoop 1 (Yellow) -->
+  <circle cx="40" cy="46" r="16" fill="#ffeaa7" stroke="#2d3436" stroke-width="3"/>
+  <!-- Scoop 2 (Pink) -->
+  <circle cx="60" cy="46" r="16" fill="#ff7675" stroke="#2d3436" stroke-width="3"/>
+  <!-- Scoop 3 (Mint) -->
+  <circle cx="50" cy="34" r="18" fill="#55efc4" stroke="#2d3436" stroke-width="3"/>
+  <!-- Cherry -->
+  <circle cx="50" cy="14" r="6" fill="#d63031"/>
+  <path d="M 50 14 Q 53 4, 60 2" stroke="#2d3436" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Face on Mint Scoop -->
+  <circle cx="44" cy="32" r="2.5" fill="#2d3436"/>
+  <circle cx="56" cy="32" r="2.5" fill="#2d3436"/>
+  <path d="M 48 37 Q 50 40, 52 37" stroke="#2d3436" stroke-width="2" fill="none"/>
+</svg>

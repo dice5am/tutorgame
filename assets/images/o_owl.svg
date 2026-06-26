@@ -1,0 +1,24 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears/Tufts -->
+  <polygon points="26,35 15,12 38,25" fill="#a29bfe" stroke="#2d3436" stroke-width="3"/>
+  <polygon points="74,35 85,12 62,25" fill="#a29bfe" stroke="#2d3436" stroke-width="3"/>
+  <!-- Body -->
+  <ellipse cx="50" cy="52" rx="34" ry="38" fill="#a29bfe" stroke="#2d3436" stroke-width="3"/>
+  <!-- Belly -->
+  <ellipse cx="50" cy="62" rx="22" ry="24" fill="#ffffff" opacity="0.9"/>
+  <!-- Belly Feathers -->
+  <path d="M 45 54 Q 50 58, 55 54 M 40 64 Q 50 70, 60 64" fill="none" stroke="#b2bec3" stroke-width="2"/>
+  <!-- Big Eyes -->
+  <circle cx="36" cy="38" r="11.5" fill="#ffffff" stroke="#2d3436" stroke-width="2.5"/>
+  <circle cx="36" cy="38" r="5.5" fill="#2d3436"/>
+  <circle cx="38" cy="36" r="2" fill="#ffffff"/>
+  
+  <circle cx="64" cy="38" r="11.5" fill="#ffffff" stroke="#2d3436" stroke-width="2.5"/>
+  <circle cx="64" cy="38" r="5.5" fill="#2d3436"/>
+  <circle cx="66" cy="36" r="2" fill="#ffffff"/>
+  <!-- Beak -->
+  <polygon points="46,45 54,45 50,54" fill="#e67e22" stroke="#2d3436" stroke-width="2"/>
+  <!-- Wings -->
+  <path d="M 16 52 C 10 58, 12 70, 20 70" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 84 52 C 90 58, 88 70, 80 70" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rays (Triangles) -->
+  <g fill="#f39c12">
+    <polygon points="50,4 44,22 56,22"/>
+    <polygon points="50,96 44,78 56,78"/>
+    <polygon points="4,50 22,44 22,56"/>
+    <polygon points="96,50 78,44 78,56"/>
+    
+    <polygon points="18,18 34,28 26,36"/>
+    <polygon points="82,82 66,72 74,64"/>
+    <polygon points="82,18 66,28 74,36"/>
+    <polygon points="18,82 34,72 26,64"/>
+  </g>
+  <!-- Sun Body -->
+  <circle cx="50" cy="50" r="28" fill="#f1c40f" stroke="#2d3436" stroke-width="3"/>
+  <!-- Face -->
+  <circle cx="42" cy="46" r="3.5" fill="#2d3436"/>
+  <circle cx="58" cy="46" r="3.5" fill="#2d3436"/>
+  <path d="M 44 54 Q 50 61, 56 54" stroke="#2d3436" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="34" cy="50" r="3.5" fill="#f39c12" opacity="0.7"/>
+  <circle cx="66" cy="50" r="3.5" fill="#f39c12" opacity="0.7"/>
+</svg>

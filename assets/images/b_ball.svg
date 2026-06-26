@@ -1,0 +1,18 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="ballGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dfe6e9"/>
+    </radialGradient>
+  </defs>
+  <!-- Ball Outer -->
+  <circle cx="50" cy="50" r="42" fill="url(#ballGrad)" stroke="#2d3436" stroke-width="3"/>
+  <!-- Segments -->
+  <path d="M 50 8 A 42 42 0 0 0 50 92 A 25 42 0 0 1 50 8 Z" fill="#ff7675"/>
+  <path d="M 50 8 A 42 42 0 0 1 50 92 A 25 42 0 0 0 50 8 Z" fill="#74b9ff"/>
+  <circle cx="50" cy="50" r="15" fill="#ffeaa7" stroke="#2d3436" stroke-width="3"/>
+  <!-- Face -->
+  <circle cx="45" cy="47" r="3.5" fill="#2d3436"/>
+  <circle cx="55" cy="47" r="3.5" fill="#2d3436"/>
+  <path d="M 47 54 Q 50 57, 53 54" stroke="#2d3436" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

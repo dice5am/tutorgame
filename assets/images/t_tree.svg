@@ -1,0 +1,18 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Trunk -->
+  <path d="M 44 90 L 46 54 L 54 54 L 56 90 Z" fill="#8d6e63" stroke="#2d3436" stroke-width="3"/>
+  <!-- Branch detail -->
+  <path d="M 46 64 Q 38 56, 32 60" fill="none" stroke="#2d3436" stroke-width="3" stroke-linecap="round"/>
+  <!-- Foliage (Three stacked cloud circles) -->
+  <circle cx="38" cy="42" r="20" fill="#2ecc71" stroke="#2d3436" stroke-width="3"/>
+  <circle cx="62" cy="42" r="20" fill="#2ecc71" stroke="#2d3436" stroke-width="3"/>
+  <circle cx="50" cy="28" r="22" fill="#2ecc71" stroke="#2d3436" stroke-width="3"/>
+  <!-- Apple Apples in Tree -->
+  <circle cx="38" cy="38" r="4.5" fill="#e74c3c"/>
+  <circle cx="62" cy="44" r="4.5" fill="#e74c3c"/>
+  <circle cx="50" cy="24" r="4.5" fill="#e74c3c"/>
+  <!-- Face on trunk -->
+  <circle cx="47" cy="74" r="1.5" fill="#2d3436"/>
+  <circle cx="53" cy="74" r="1.5" fill="#2d3436"/>
+  <path d="M 49 77 Q 50 78, 51 77" stroke="#2d3436" stroke-width="1" fill="none"/>
+</svg>

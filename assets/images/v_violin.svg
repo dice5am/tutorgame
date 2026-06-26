@@ -1,0 +1,19 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Neck/Pegbox -->
+  <rect x="47" y="10" width="6" height="30" fill="#a0522d" stroke="#2d3436" stroke-width="2"/>
+  <circle cx="50" cy="8" r="4.5" fill="#8b4513" stroke="#2d3436" stroke-width="2"/>
+  <!-- Pegs -->
+  <line x1="43" y1="16" x2="57" y2="16" stroke="#2d3436" stroke-width="3"/>
+  <line x1="43" y1="24" x2="57" y2="24" stroke="#2d3436" stroke-width="3"/>
+  <!-- Body -->
+  <path d="M 50 36 C 36 36, 32 46, 42 54 C 30 62, 34 86, 50 86 C 66 86, 70 62, 58 54 C 68 46, 64 36, 50 36 Z" fill="#cd853f" stroke="#2d3436" stroke-width="3"/>
+  <!-- F-Holes -->
+  <path d="M 38 60 Q 42 62, 38 66" fill="none" stroke="#2d3436" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 62 60 Q 58 62, 62 66" fill="none" stroke="#2d3436" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Tailpiece & Bridge -->
+  <polygon points="46,74 54,74 52,84 48,84" fill="#2d3436"/>
+  <line x1="44" y1="67" x2="56" y2="67" stroke="#8b4513" stroke-width="3"/>
+  <!-- Strings -->
+  <line x1="49" y1="16" x2="49" y2="74" stroke="#dfe6e9" stroke-width="1.5"/>
+  <line x1="51" y1="16" x2="51" y2="74" stroke="#dfe6e9" stroke-width="1.5"/>
+</svg>

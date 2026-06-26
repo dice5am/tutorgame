@@ -1,0 +1,29 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mane -->
+  <path d="M 50 16 Q 36 2, 38 28" fill="none" stroke="#2d3436" stroke-width="7" stroke-linecap="round"/>
+  <!-- Ears -->
+  <path d="M 40 24 C 36 12, 42 10, 44 24" fill="#ffffff" stroke="#2d3436" stroke-width="2.5"/>
+  <path d="M 40 24 C 37 15, 41 13, 42 24" fill="#ff7675"/>
+  <path d="M 60 24 C 64 12, 58 10, 56 24" fill="#ffffff" stroke="#2d3436" stroke-width="2.5"/>
+  <path d="M 60 24 C 63 15, 59 13, 58 24" fill="#ff7675"/>
+  <!-- Head -->
+  <ellipse cx="50" cy="46" rx="20" ry="26" fill="#ffffff" stroke="#2d3436" stroke-width="3"/>
+  <!-- Muzzle -->
+  <ellipse cx="50" cy="62" rx="14" ry="10" fill="#bdc3c7"/>
+  <!-- Nose/Smile -->
+  <circle cx="46" cy="60" r="2" fill="#2d3436"/>
+  <circle cx="54" cy="60" r="2" fill="#2d3436"/>
+  <path d="M 46 66 Q 50 69, 54 66" stroke="#2d3436" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Stripes -->
+  <!-- Left Side -->
+  <polygon points="31,38 41,40 40,43 31,40" fill="#2d3436"/>
+  <polygon points="30,48 40,49 39,52 30,50" fill="#2d3436"/>
+  <!-- Right Side -->
+  <polygon points="69,38 59,40 60,43 69,40" fill="#2d3436"/>
+  <polygon points="70,48 60,49 61,52 70,50" fill="#2d3436"/>
+  <!-- Forehead Stripe -->
+  <polygon points="50,22 47,34 53,34" fill="#2d3436"/>
+  <!-- Eyes -->
+  <circle cx="43" cy="38" r="3.5" fill="#2d3436"/>
+  <circle cx="57" cy="38" r="3.5" fill="#2d3436"/>
+</svg>
